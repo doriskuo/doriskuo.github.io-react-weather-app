@@ -2,7 +2,7 @@
   "name": "forpractice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://doriskuo.github.io/react-weather-app",
+  "homepage": "https://doriskuo.github.io/doriskuo.github.io-react-weather-app",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
