@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-weather-app/static/css/main.6879d0b5.css",
-    "main.js": "/react-weather-app/static/js/main.fe5ed409.js",
-    "index.html": "/react-weather-app/index.html",
-    "main.6879d0b5.css.map": "/react-weather-app/static/css/main.6879d0b5.css.map",
-    "main.fe5ed409.js.map": "/react-weather-app/static/js/main.fe5ed409.js.map"
+    "main.css": "/doriskuo.github.io-react-weather-app/static/css/main.6879d0b5.css",
+    "main.js": "/doriskuo.github.io-react-weather-app/static/js/main.fe5ed409.js",
+    "index.html": "/doriskuo.github.io-react-weather-app/index.html",
+    "main.6879d0b5.css.map": "/doriskuo.github.io-react-weather-app/static/css/main.6879d0b5.css.map",
+    "main.fe5ed409.js.map": "/doriskuo.github.io-react-weather-app/static/js/main.fe5ed409.js.map"
   },
   "entrypoints": [
     "static/css/main.6879d0b5.css",
