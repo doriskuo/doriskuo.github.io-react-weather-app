@@ -1,0 +1,56 @@
+.thunderbox
+    position: relative
+    width: 100px
+    height: 100px
+    left: 50%
+    transform: translateX(-50%)
+    .thunderlight
+        animation: thunder 0.5s infinite ease-in-out
+        animation: pop 1s infinite ease-in-out
+        fill: rgb(207, 198, 144)
+        stroke: rgb(243, 219, 61)
+        stroke-width: 3px
+
+
+@keyframes thunder
+    0%
+        fill: rgb(207, 198, 144)
+        stroke: rgb(243, 219, 61)
+        stroke-width: 3px
+    20%
+        fill: rgb(222, 214, 167)
+        stroke: rgb(243, 219, 61)
+        stroke-width: 1px
+    40%
+        fill: rgb(207, 198, 144)
+        stroke: rgb(243, 219, 61)
+        stroke-width: 3px
+    75%
+        fill: rgb(222, 214, 167)
+        stroke: rgb(243, 219, 61)
+        stroke-width: 1px
+    100%
+        fill: rgb(207, 198, 144)
+        stroke: rgb(243, 219, 61)
+        stroke-width: 3px
+
+
+@keyframes pop
+    0%
+        transform: translateX(-5px)
+        
+    10%
+        transform: translateX(5px)
+        
+    20%
+        transform: translateX(-5px)
+        
+    30%
+        transform: translateX(5px)
+        
+    40%
+        transform: translateX(0px)
+        
+    100%
+        transform: translateX(0px)
+        opacity: 0

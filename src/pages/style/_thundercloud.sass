@@ -1,0 +1,22 @@
+.thundercloudbox
+    position: relative
+    width: 100px
+    height: 100px
+    left: 50%
+    transform: translateX(-50%)
+    .thunder-in-cloud
+        position: absolute
+        top: 20px
+        animation: thunderdrift 4s infinite
+    .cloud-in-thunder
+        position: absolute
+        z-index: -3
+        transform: scale(0.8) translateY(-5px)
+
+@keyframes thunderdrift
+  0%
+    transform: scale(0.6) translateY(0px)
+  50%
+    transform: scale(0.6) translateY(-20px)
+  100%
+    transform: scale(0.6) translateY(0px)

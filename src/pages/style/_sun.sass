@@ -1,0 +1,42 @@
+.sunbox
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    position: relative
+    width: 100px
+    height: 100px
+    .suncircle
+        animation: light 5s infinite
+        animation-delay: 0.2s
+        transition-duration: 0.5s
+        fill: #FFD633
+        stroke-width: 20px
+        stroke-dasharray: 0.5%
+        stroke: rgba(232, 236, 139, 0.8)
+
+@keyframes light
+    0%
+        fill: #FFD633
+        stroke-width: 18px
+        stroke-dasharray: 0.5%
+        stroke: rgba(232, 236, 139, 0.8)
+    25%
+        fill: #f5ff33
+        stroke-width: 20px
+        stroke-dasharray: 0.5%
+        stroke: rgba(241, 244, 180, 0.8)
+    50%
+        fill: #FFD633
+        stroke-width: 18px
+        stroke-dasharray: 0.5%
+        stroke: rgba(232, 236, 139, 0.8)
+    75%
+        fill: #f5ff33
+        stroke-width: 20px
+        stroke-dasharray: 0.5%
+        stroke: rgba(241, 244, 180, 0.8)
+    100%
+        fill: #FFD633
+        stroke-width: 18px
+        stroke-dasharray: 0.5%
+        stroke: rgba(232, 236, 139, 0.8)

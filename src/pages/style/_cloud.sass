@@ -1,0 +1,48 @@
+@mixin circle ($w,$h)
+    width: $w
+    height: $h
+    background-color: #fff
+
+@mixin center
+    position: relative
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+
+    
+.cloudbox
+    position: relative
+    right: 50%
+    left: 50%
+    transform: translateX(-50%)
+    width: 100px
+    height: 100px
+    .circle
+        animation: cloudrift 4s infinite
+    .circle1
+        +circle(90px,40px)
+        position: absolute
+        top: 40%
+        border-radius: 20px
+
+    .circle2
+        +circle(50px,50px)
+        position: absolute
+        left: 10%
+        top: 20%
+        border-radius: 50%
+    .circle3
+
+        +circle(40px,40px)
+        position: absolute
+        left: 40%
+        top: 30%
+        border-radius: 50%
+
+@keyframes cloudrift
+  0%
+    transform: translateY(0px)
+  50%
+    transform: translateY(-10px)
+  100%
+    transform: translateY(0px)
