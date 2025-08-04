@@ -124,9 +124,10 @@ nav ul li a {
   top: 165px;
 }
 .weatherbg .weatherbox .tip {
-  font-size: 28px;
+  font-size: 12px;
   left: 55px;
-  top: 200px;
+  top: 220px;
+  padding-right: 10px;
 }
 .weatherbg .weatherbox .overview {
   font-size: 10px;

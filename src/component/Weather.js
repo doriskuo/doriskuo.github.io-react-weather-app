@@ -8,42 +8,41 @@ import Thundercloud from "./Thundercloud";
 import Thunderrain from "./Thunderrain";
 import dayjs from "dayjs";
 
-const Weather = ({ data, name }) => {
-  let weathercode = data.weatherElement[0].time[0].parameter.parameterValue;
+const Weather = ({ data, city }) => {
+  let weathercode = data[12].Time[0].ElementValue[0].WeatherCode;
   console.log(weathercode);
+
   return (
     <div className="weatherbg">
-      <div className="weatherbox" name={name}>
+      <div className="weatherbox">
         <div className="iconbox">
-          {weathercode == 1 && <Sun />}
-          {["2", "3"].includes(weathercode) && <Suncloud />}
-          {["4", "5", "6", "7"].includes(weathercode) && (
+          {weathercode == "01" && <Sun />}
+          {["02", "03"].includes(weathercode) && <Suncloud />}
+          {["04", "05", "06", "07"].includes(weathercode) && (
             <Cloud className="cloud-in-weather" />
           )}
-          {["8", "9", "10", "11", "12", "13", "14", "29", "30"].includes(
+          {["08", "09", "10", "11", "12", "13", "14", "29", "30"].includes(
             weathercode
           ) && <Rain className="rain-in-weather" />}
           {["15", "16", "17", "18", "22", "33", "34"].includes(weathercode) && (
             <Thunderrain />
           )}
         </div>
-        <div className="city">{data.locationName}</div>
+        <div className="city">{city}</div>
         <div className="date">
-          {dayjs(data.weatherElement[0].time[0].startTime).format(
-            "M月D日 HH:mm"
-          )}
+          {dayjs(data[0].Time[0].StartTime).format("M月D日 HH:mm")}
         </div>
         <div className="overview">
-          {data.weatherElement[0].time[0].parameter.parameterName}
+          {data[12].Time[0].ElementValue[0].Weather}
         </div>
         <div className="precipitation">
-          降雨機率{data.weatherElement[1].time[0].parameter.parameterName}%
+          降雨機率{data[11].Time[0].ElementValue[0].ProbabilityOfPrecipitation}%
         </div>
         <div className="temperature">
-          {data.weatherElement[2].time[0].parameter.parameterName}˚C
+          {data[0].Time[0].ElementValue[0].Temperature}˚C
         </div>
         <div className="tip">
-          {data.weatherElement[3].time[0].parameter.parameterName}
+          {data[14].Time[0].ElementValue[0].WeatherDescription}
         </div>
       </div>
     </div>
