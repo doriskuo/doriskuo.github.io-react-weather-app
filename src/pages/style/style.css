@@ -136,6 +136,9 @@ nav ul li a {
 .weatherbg .weatherbox .cloud-in-weather {
   transform: scale(0.8);
 }
+.weatherbg .weatherbox .rain-in-weather {
+  transform: scale(0.8);
+}
 
 .optbg {
   background-color: #0F044C;

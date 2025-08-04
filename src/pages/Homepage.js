@@ -9,9 +9,9 @@ const Homepage = () => {
   const auth = process.env.REACT_APP_AUTH_KEY;
 
   const getdata = async () => {
-    let weatherAPI = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=${auth}&locationName=${select}&format=JSON&sort=time`;
+    let weatherAPI = `https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=${auth}&LocationName=${select}&format=JSON`;
     let result = await axios.get(weatherAPI);
-    console.log(result.data.records.location);
+    console.log(result.data.records.Locations[0].Location[0]);
     setData(result.data.records.location);
   };
 

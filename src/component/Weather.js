@@ -22,7 +22,7 @@ const Weather = ({ data, name }) => {
           )}
           {["8", "9", "10", "11", "12", "13", "14", "29", "30"].includes(
             weathercode
-          ) && <Rain />}
+          ) && <Rain className="rain-in-weather" />}
           {["15", "16", "17", "18", "22", "33", "34"].includes(weathercode) && (
             <Thunderrain />
           )}
