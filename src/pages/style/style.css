@@ -171,6 +171,158 @@ nav ul li a {
 .weatherbg .weatherbox .right:hover .dayweather {
   opacity: 1;
 }
+.weatherbg .weatherbox .right:hover .dayweather:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:hover .dayweather:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:hover .dayweather:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:hover .dayweather:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:hover .dayweather:nth-child(5) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:hover .dayweather:nth-child(6) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:hover .dayweather:nth-child(7) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:hover svg circle {
+  opacity: 1;
+}
+.weatherbg .weatherbox .right:hover svg circle:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:hover svg circle:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:hover svg circle:nth-child(5) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:hover svg circle:nth-child(7) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:hover svg circle:nth-child(9) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:hover svg circle:nth-child(11) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:hover svg circle:nth-child(13) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:hover svg text {
+  opacity: 1;
+}
+.weatherbg .weatherbox .right:hover svg text:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:hover svg text:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:hover svg text:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:hover svg text:nth-child(8) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:hover svg text:nth-child(10) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:hover svg text:nth-child(12) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:hover svg text:nth-child(14) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:hover svg polyline {
+  transition-duration: 4s;
+  opacity: 1;
+}
+.weatherbg .weatherbox .right:not(:hover) {
+  transition-duration: 4s;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather {
+  opacity: 0;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(7) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(6) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(5) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(3) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(2) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(1) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle {
+  opacity: 0;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(13) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(11) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(9) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(7) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(5) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(3) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(1) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text {
+  opacity: 0;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(14) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(12) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(10) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(8) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(6) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(4) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(2) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) svg polyline {
+  transition-duration: 4s;
+  opacity: 0;
+}
 
 .optbg {
   background-color: black;
@@ -525,34 +677,6 @@ nav ul li a {
   transform: scale(0.6);
 }
 
-.dayweather:nth-child(1) {
-  transition-delay: 0.2s;
-}
-
-.dayweather:nth-child(2) {
-  transition-delay: 0.4s;
-}
-
-.dayweather:nth-child(3) {
-  transition-delay: 0.6s;
-}
-
-.dayweather:nth-child(4) {
-  transition-delay: 0.8s;
-}
-
-.dayweather:nth-child(5) {
-  transition-delay: 1s;
-}
-
-.dayweather:nth-child(6) {
-  transition-delay: 1.2s;
-}
-
-.dayweather:nth-child(7) {
-  transition-delay: 1.4s;
-}
-
 .thundersunbox {
   position: relative;
   width: 100px;
@@ -579,17 +703,22 @@ nav ul li a {
   height: 100%;
 }
 .temperaturebox svg {
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 150px;
+  display: block;
 }
 .temperaturebox svg circle {
   fill: white;
+  opacity: 0;
+  transition: 0.5s;
 }
 .temperaturebox svg text {
   font-size: 8px;
+  opacity: 0;
   fill: white;
 }
 .temperaturebox svg polyline {
   stroke: white;
+  opacity: 0;
   fill: none;
 }/*# sourceMappingURL=style.css.map */

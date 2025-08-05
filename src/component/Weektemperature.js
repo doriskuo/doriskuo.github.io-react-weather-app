@@ -1,7 +1,13 @@
 import React from "react";
 
 const Weektemperature = ({ Weekweathertemperatures }) => {
-  const daytemperatures = Weekweathertemperatures.filter((d, i) => i % 2 == 1);
+  const daytemperatures = Weekweathertemperatures.filter(
+    (d, i) => i % 2 == 1
+  ).sort(
+    (a, b) =>
+      new Date(a.ElementValue[0].StartTime) -
+      new Date(b.ElementValue[0].StartTime)
+  );
   console.log(daytemperatures);
   const temps = daytemperatures.map((tem) => {
     return tem.ElementValue[0].Temperature;
@@ -12,7 +18,7 @@ const Weektemperature = ({ Weekweathertemperatures }) => {
 
   return (
     <div className="temperaturebox">
-      <svg viewbox="0 0 100 100">
+      <svg viewBox="0 0 400 150">
         {daytemperatures.map((t, i) => {
           let tcode = t.ElementValue[0].Temperature;
           return (
