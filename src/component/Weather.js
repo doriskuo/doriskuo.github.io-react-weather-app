@@ -9,10 +9,12 @@ import Thunderrain from "./Thunderrain";
 import dayjs from "dayjs";
 import Weekweather from "./Weekweather";
 import Thundersun from "./Thundersun";
+import Weektemperature from "./Weektemperature";
 
 const Weather = ({ data, city }) => {
   let weathercode = data[12].Time[0].ElementValue[0].WeatherCode;
   let Weekweathers = data[12].Time;
+  let Weekweathertemperatures = data[0].Time;
   return (
     <div className="weatherbg">
       <div className="weatherbox">
@@ -50,9 +52,13 @@ const Weather = ({ data, city }) => {
           </div>
         </div>
         <div className="right">
-          <div className="topbox"></div>
+          <div className="topbox">
+            <Weektemperature
+              Weekweathertemperatures={Weekweathertemperatures}
+            />
+          </div>
           <div className="bottombox">
-            <Weekweather Weekweathers={Weekweathers} className="active" />
+            <Weekweather Weekweathers={Weekweathers} />
           </div>
         </div>
       </div>

@@ -151,7 +151,7 @@ nav ul li a {
   border-left: 8px solid #fff;
   width: 10px;
   overflow: hidden;
-  transition-duration: 0.5s;
+  transition-duration: 2s;
   display: flex;
   flex-direction: column;
 }
@@ -166,7 +166,7 @@ nav ul li a {
 .weatherbg .weatherbox .right:hover {
   width: 400px;
   border-left: none;
-  transition-duration: 0.5s;
+  transition-duration: 2s;
 }
 .weatherbg .weatherbox .right:hover .dayweather {
   opacity: 1;
@@ -571,4 +571,25 @@ nav ul li a {
   top: 10px;
   left: 20px;
   transform: scale(0.8);
+}
+
+.temperaturebox {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.temperaturebox svg {
+  width: 100%;
+  height: 100%;
+}
+.temperaturebox svg circle {
+  fill: white;
+}
+.temperaturebox svg text {
+  font-size: 8px;
+  fill: white;
+}
+.temperaturebox svg polyline {
+  stroke: white;
+  fill: none;
 }/*# sourceMappingURL=style.css.map */
