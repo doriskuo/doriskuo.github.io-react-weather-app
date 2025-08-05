@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Weather from "../component/Weather";
 import Option from "../component/Option";
+import Weekweather from "../component/Weekweather";
 
 const Homepage = () => {
   let [city, setCity] = useState("");

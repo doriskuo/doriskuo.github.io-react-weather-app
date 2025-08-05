@@ -1,6 +1,6 @@
 .weatherbg
     // border: 1px solid #fff
-    background-color: #0F044C
+    background-color: black
     width: 100%
     height: 80vh
     display: flex
@@ -8,58 +8,86 @@
     align-items: center
     flex-wrap: wrap
     .weatherbox
+        border-radius: 10px
+        display: flex
         position: relative
-        // border: 1px solid #EEEEEE
+        background-color: #0F044C
         box-sizing: border-box
-        width: 400px
+        width: auto
         height: 300px
-        margin: 10px
-        padding: 10px
-        .iconbox
-            // border: 1px solid #fff
-            position: absolute
-            width: 120px
-            height: 120px
-            left: 230px
-            top: 80px
-            // display: flex
-            // justify-content: center
-            // align-items: center
+        .left
+            // border: 1px solid red
+            width: 400px
+            .iconbox
+                // border: 1px solid #fff
+                position: absolute
+                width: 120px
+                height: 120px
+                left: 230px
+                top: 60px
+                // display: flex
+                // justify-content: center
+                // align-items: center
 
-        .temperature,.overview,.date,.precipitation,.tip,.city
-            position: absolute
-            color: #EEEEEE
+            .temperature,.overview,.date,.precipitation,.tip,.city
+                position: absolute
+                color: #EEEEEE
 
-        .temperature
-            font-size: 50px
-            left: 50px
-            top: 50px
-        .city
-            font-size: 16px
-            left: 55px
-            top: 120px
-        .date
-            font-size: 12px
-            left: 55px
-            top: 145px
-        .precipitation
-            font-size: 12px
-            left: 55px
-            top: 165px
-        .tip
-            font-size: 12px
-            left: 55px
-            top: 220px
-            padding-right: 10px
+            .temperature
+                font-size: 50px
+                left: 50px
+                top: 50px
+            .city
+                font-size: 16px
+                left: 55px
+                top: 120px
+            .date
+                font-size: 12px
+                left: 55px
+                top: 145px
+            .precipitation
+                font-size: 12px
+                left: 55px
+                top: 165px
+            .tip
+                width: 300px
+                font-size: 12px
+                left: 55px
+                top: 220px
+                padding-right: 10px
 
-        .overview
-            font-size: 10px
-            left: 280px
-            top: 180px
+            .overview
+                font-size: 10px
+                left: 280px
+                top: 160px
 
-        .cloud-in-weather
-            transform: scale(0.8)
-            
+            .cloud-in-weather
+                transform: scale(0.8)
+                
 
-        .rain-in-weather
-            transform: scale(0.8)
+            .rain-in-weather
+                transform: scale(0.8)
+
+        .right
+            cursor: pointer
+            box-sizing: border-box
+            border-left: 8px solid #fff
+            width: 10px
+            overflow: hidden
+            transition-duration: 0.5s
+            display: flex
+            flex-direction: column
+            .topbox
+                width: 100%
+                height: 300px
+            .bottombox
+                width: auto
+                height: auto
+            &:hover
+                width: 400px
+                border-left: none
+                transition-duration: 0.5s
+                .dayweather
+                    opacity: 1
+
+
