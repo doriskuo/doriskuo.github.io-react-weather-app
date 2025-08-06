@@ -1,5 +1,4 @@
 .weatherbg
-    // border: 1px solid #fff
     background-color: black
     width: 100%
     height: 80vh
@@ -8,70 +7,86 @@
     align-items: center
     flex-wrap: wrap
     .weatherbox
-        border-radius: 10px
+        border-radius: 15px
         display: flex
         position: relative
         background-color: #0F044C
         box-sizing: border-box
         width: auto
-        height: 300px
+        height: auto
         .left
-            // border: 1px solid red
-            width: 400px
-            .iconbox
-                // border: 1px solid #fff
-                position: absolute
-                width: 120px
-                height: 120px
-                left: 230px
-                top: 60px
-                // display: flex
-                // justify-content: center
-                // align-items: center
+            width: 550px
+            display: flex
+            flex-direction: column
+            .top-in-left
+                width: 100%
+                flex: 1 1 75%
+                display: flex
+                .left-in-lefttop
+                    flex: 1 1 40%
+                    padding: 60px 0 0 70px
+                    color: #EEEEEE
+                    .temperature
+                        font-size: 70px
+                        padding: 0
+                        margin: 0
+                    .city
+                        font-size: 20px
+                        padding: 5px 0 5px 10px
+                        margin: 0
+                    .date
+                        font-size: 16px
+                        padding: 0 0 5px 10px
+                        margin: 0
+                    .precipitation
+                        font-size: 16px
+                        padding: 0 0 0 10px
+                        margin: 0
 
-            .temperature,.overview,.date,.precipitation,.tip,.city
-                position: absolute
-                color: #EEEEEE
+                .right-in-lefttop
+                    flex: 1 1 60%
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    .iconbox
+                        width: 180px
+                        height: 180px
+                        .cloud-in-weather
+                            transform: scale(1.4) translateY(30px)
+                            
+                        .rain-in-weather
+                            transform: scale(1.4) translateY(30px)
+                        .suncloud-in-weather
+                            transform: scale(1.4) translate(-10px,40px)
+                        .sun-in-weather
+                            transform: scale(1.6) translate(-10px,90px)
+                        .thunderrain-in-weather
+                            transform: scale(1.5) translateY(30px)
+                        .thundersun-in-weather
+                            transform: scale(1.6) translate(-20px,30px)
 
-            .temperature
-                font-size: 50px
-                left: 50px
-                top: 50px
-            .city
-                font-size: 16px
-                left: 55px
-                top: 120px
-            .date
-                font-size: 12px
-                left: 55px
-                top: 145px
-            .precipitation
-                font-size: 12px
-                left: 55px
-                top: 165px
-            .tip
-                width: 300px
-                font-size: 12px
-                left: 55px
-                top: 220px
-                padding-right: 10px
-
-            .overview
-                font-size: 10px
-                left: 280px
-                top: 160px
-
-            .cloud-in-weather
-                transform: scale(0.8)
+                    .overview
+                        color: #EEEEEE
+                        font-size: 12px
+                        transform: translateY(-20px)
                 
 
-            .rain-in-weather
-                transform: scale(0.8)
+            .bottom-in-left
+                // border: 1px solid #fff
+                width: 100%
+                flex: 1 1 25%
+                .tip
+                    color: #EEEEEE
+                    font-size: 16px
+                    padding: 0px 80px
+                    margin: 0
+                    
 
         .right
             cursor: pointer
             box-sizing: border-box
-            border-left: 8px solid #fff
+            border-left: 8px solid rgba(240, 240, 228, 1)
             width: 10px
             overflow: hidden
             transition-duration: 2s
@@ -79,13 +94,13 @@
             flex-direction: column
             .topbox
                 width: 100%
-                height: 300px
+                height: auto
             .bottombox
                 width: auto
                 height: auto
             &:hover
-                width: 400px
-                border-left: none
+                width: 600px
+                border-left: 8px solid rgba(240, 240, 228, 0)
                 transition-duration: 2s
                 .dayweather
                     opacity: 1

@@ -5,8 +5,7 @@ html, body {
 }
 
 .weatherArea {
-  width: 100%;
-  background-color: #0F044C;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -14,7 +13,7 @@ html, body {
 .about {
   padding: 50px 0px;
   width: 100%;
-  height: 65vh;
+  height: 70vh;
   background-color: #0F044C;
   color: #fff;
 }
@@ -27,16 +26,24 @@ html, body {
 
 .nopages {
   width: 100%;
-  height: 100%;
-  padding: 50px 0px;
+  height: 85vh;
   background-color: #0F044C;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .nopages h1 {
   text-align: center;
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 .nopages p {
   text-align: center;
+  font-size: 36px;
+  margin: 0;
 }
 
 .footerbar {
@@ -57,7 +64,7 @@ html, body {
 
 nav {
   background-color: #141E61;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -73,6 +80,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #EEEEEE;
+  font-size: 20px;
 }
 
 .weatherbg {
@@ -85,70 +93,97 @@ nav ul li a {
   flex-wrap: wrap;
 }
 .weatherbg .weatherbox {
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   position: relative;
   background-color: #0F044C;
   box-sizing: border-box;
   width: auto;
-  height: 300px;
+  height: auto;
 }
 .weatherbg .weatherbox .left {
-  width: 400px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
 }
-.weatherbg .weatherbox .left .iconbox {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  left: 230px;
-  top: 60px;
+.weatherbg .weatherbox .left .top-in-left {
+  width: 100%;
+  flex: 1 1 75%;
+  display: flex;
 }
-.weatherbg .weatherbox .left .temperature, .weatherbg .weatherbox .left .overview, .weatherbg .weatherbox .left .date, .weatherbg .weatherbox .left .precipitation, .weatherbg .weatherbox .left .tip, .weatherbg .weatherbox .left .city {
-  position: absolute;
+.weatherbg .weatherbox .left .top-in-left .left-in-lefttop {
+  flex: 1 1 40%;
+  padding: 60px 0 0 70px;
   color: #EEEEEE;
 }
-.weatherbg .weatherbox .left .temperature {
-  font-size: 50px;
-  left: 50px;
-  top: 50px;
+.weatherbg .weatherbox .left .top-in-left .left-in-lefttop .temperature {
+  font-size: 70px;
+  padding: 0;
+  margin: 0;
 }
-.weatherbg .weatherbox .left .city {
+.weatherbg .weatherbox .left .top-in-left .left-in-lefttop .city {
+  font-size: 20px;
+  padding: 5px 0 5px 10px;
+  margin: 0;
+}
+.weatherbg .weatherbox .left .top-in-left .left-in-lefttop .date {
   font-size: 16px;
-  left: 55px;
-  top: 120px;
+  padding: 0 0 5px 10px;
+  margin: 0;
 }
-.weatherbg .weatherbox .left .date {
+.weatherbg .weatherbox .left .top-in-left .left-in-lefttop .precipitation {
+  font-size: 16px;
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox {
+  width: 180px;
+  height: 180px;
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .cloud-in-weather {
+  transform: scale(1.4) translateY(30px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .rain-in-weather {
+  transform: scale(1.4) translateY(30px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .suncloud-in-weather {
+  transform: scale(1.4) translate(-10px, 40px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .sun-in-weather {
+  transform: scale(1.6) translate(-10px, 90px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thunderrain-in-weather {
+  transform: scale(1.5) translateY(30px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundersun-in-weather {
+  transform: scale(1.6) translate(-20px, 30px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .overview {
+  color: #EEEEEE;
   font-size: 12px;
-  left: 55px;
-  top: 145px;
+  transform: translateY(-20px);
 }
-.weatherbg .weatherbox .left .precipitation {
-  font-size: 12px;
-  left: 55px;
-  top: 165px;
+.weatherbg .weatherbox .left .bottom-in-left {
+  width: 100%;
+  flex: 1 1 25%;
 }
-.weatherbg .weatherbox .left .tip {
-  width: 300px;
-  font-size: 12px;
-  left: 55px;
-  top: 220px;
-  padding-right: 10px;
-}
-.weatherbg .weatherbox .left .overview {
-  font-size: 10px;
-  left: 280px;
-  top: 160px;
-}
-.weatherbg .weatherbox .left .cloud-in-weather {
-  transform: scale(0.8);
-}
-.weatherbg .weatherbox .left .rain-in-weather {
-  transform: scale(0.8);
+.weatherbg .weatherbox .left .bottom-in-left .tip {
+  color: #EEEEEE;
+  font-size: 16px;
+  padding: 0px 80px;
+  margin: 0;
 }
 .weatherbg .weatherbox .right {
   cursor: pointer;
   box-sizing: border-box;
-  border-left: 8px solid #fff;
+  border-left: 8px solid rgb(240, 240, 228);
   width: 10px;
   overflow: hidden;
   transition-duration: 2s;
@@ -157,15 +192,15 @@ nav ul li a {
 }
 .weatherbg .weatherbox .right .topbox {
   width: 100%;
-  height: 300px;
+  height: auto;
 }
 .weatherbg .weatherbox .right .bottombox {
   width: auto;
   height: auto;
 }
 .weatherbg .weatherbox .right:hover {
-  width: 400px;
-  border-left: none;
+  width: 600px;
+  border-left: 8px solid rgba(240, 240, 228, 0);
   transition-duration: 2s;
 }
 .weatherbg .weatherbox .right:hover .dayweather {
@@ -331,8 +366,16 @@ nav ul li a {
   text-align: center;
 }
 .optbg label {
-  font-size: 16px;
+  font-size: 20px;
   margin-right: 10px;
+}
+.optbg select {
+  font-size: 19px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0px 5px;
+  background-color: black;
+  color: white;
 }
 
 .cloudbox {
@@ -654,8 +697,11 @@ nav ul li a {
 }
 .weekbox {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 400px;
+  align-items: center;
+  width: 600px;
+  height: 220px;
 }
 .weekbox .dayweather {
   width: calc(14.2857142857% - 5px);
@@ -700,11 +746,11 @@ nav ul li a {
 .temperaturebox {
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .temperaturebox svg {
-  width: 400px;
-  height: 150px;
+  width: 600px;
+  height: 220px;
   display: block;
 }
 .temperaturebox svg circle {
@@ -713,7 +759,7 @@ nav ul li a {
   transition: 0.5s;
 }
 .temperaturebox svg text {
-  font-size: 8px;
+  font-size: 12px;
   opacity: 0;
   fill: white;
 }

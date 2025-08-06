@@ -13,23 +13,23 @@ const Weektemperature = ({ Weekweathertemperatures }) => {
     return tem.ElementValue[0].Temperature;
   });
   const points = temps
-    .map((temp, index) => `${index * 50 + 50},${150 - temp * 10 + 250}`)
+    .map((temp, index) => `${index * 80 + 50},${150 - temp * 15 + 420}`)
     .join(" ");
 
   return (
     <div className="temperaturebox">
-      <svg viewBox="0 0 400 150">
+      <svg viewBox="0 0 600 220">
         {daytemperatures.map((t, i) => {
           let tcode = t.ElementValue[0].Temperature;
           return (
             <>
               <circle
-                cx={i * 50 + 50}
-                cy={150 - tcode * 10 + 250}
-                r="3"
+                cx={i * 80 + 50}
+                cy={150 - tcode * 15 + 420}
+                r="4"
                 key={i}
               ></circle>
-              <text x={i * 50 + 50} y={150 - tcode * 10 + 240}>
+              <text x={i * 80 + 50} y={150 - tcode * 15 + 400}>
                 {tcode}˚C
               </text>
             </>
