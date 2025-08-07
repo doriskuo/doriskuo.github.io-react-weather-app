@@ -756,7 +756,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   width: 600px;
-  height: 220px;
+  height: 200px;
 }
 .weekbox .dayweather {
   width: calc(14.2857142857% - 5px);
@@ -805,7 +805,7 @@ nav ul li a {
 }
 .temperaturebox svg {
   width: 600px;
-  height: 220px;
+  height: 240px;
   display: block;
 }
 .temperaturebox svg circle {
