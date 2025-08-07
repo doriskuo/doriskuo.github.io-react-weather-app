@@ -197,25 +197,36 @@ nav ul li a {
 .weatherbg .weatherbox .right label {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  position: relative;
   cursor: pointer;
 }
 .weatherbg .weatherbox .right label input {
   display: none;
 }
 .weatherbg .weatherbox .right label input:checked ~ .topbox, .weatherbg .weatherbox .right label input:checked ~ .bottombox {
-  display: none;
+  opacity: 0;
+  transition-duration: 2s;
 }
 .weatherbg .weatherbox .right label input:checked ~ .wholebox {
-  display: block;
+  opacity: 1;
+  transition-duration: 2s;
+}
+.weatherbg .weatherbox .right label input:not(:checked) ~ .topbox, .weatherbg .weatherbox .right label input:not(:checked) ~ .bottombox {
+  opacity: 1;
+  transition-duration: 2s;
+}
+.weatherbg .weatherbox .right label input:not(:checked) ~ .wholebox {
+  opacity: 0;
+  transition-duration: 2s;
 }
 .weatherbg .weatherbox .right label .wholebox {
-  display: none;
   box-sizing: border-box;
   width: 100%;
   height: 440px;
-  position: relative;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
 }
 .weatherbg .weatherbox .right label .wholebox h6 {
   color: #fff;

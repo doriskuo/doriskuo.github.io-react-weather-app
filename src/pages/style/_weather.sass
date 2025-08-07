@@ -99,22 +99,33 @@
             label
                 width: 100%
                 height: 100%
-                display: flex
-                flex-direction: column
+                position: relative
                 cursor: pointer
                 input
                     display: none
                 input:checked ~ .topbox,input:checked ~ .bottombox
-                    display: none
+                    opacity: 0
+                    transition-duration: 2s
                 input:checked ~ .wholebox
-                    display: block
+                    opacity: 1
+                    transition-duration: 2s
+
+                input:not(:checked) ~ .topbox,input:not(:checked) ~ .bottombox
+                    opacity: 1
+                    transition-duration: 2s
+                input:not(:checked) ~ .wholebox
+                    opacity: 0
+                    transition-duration: 2s
+
                 
                 .wholebox
-                    display: none
                     box-sizing: border-box
                     width: 100%
                     height: 440px
-                    position: relative
+                    position: absolute
+                    left: 0px
+                    top: 0px
+                    opacity: 0
                     h6
                         color: #fff
                         position: absolute
