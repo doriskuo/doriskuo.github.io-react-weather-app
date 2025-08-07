@@ -76,14 +76,17 @@ const Weather = ({ data, city }) => {
 
         <div className="right">
           <div className="topbox">
+            <h6>一週平均氣溫</h6>
             <Weektemperature
               Weekweathertemperatures={Weekweathertemperatures}
             />
           </div>
           <div className="bottombox">
+            <h6>一週天氣概況</h6>
             <Weekweather Weekweathers={Weekweathers} />
           </div>
         </div>
+        <div className="arrow">▶︎</div>
       </div>
     </div>
   );

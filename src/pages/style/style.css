@@ -101,6 +101,13 @@ nav ul li a {
   width: auto;
   height: auto;
 }
+.weatherbg .weatherbox .arrow {
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 220px;
+  transform: rotate(180deg);
+}
 .weatherbg .weatherbox .left {
   width: 550px;
   display: flex;
@@ -193,15 +200,45 @@ nav ul li a {
 .weatherbg .weatherbox .right .topbox {
   width: 100%;
   height: auto;
+  position: relative;
+}
+.weatherbg .weatherbox .right .topbox h6 {
+  color: #fff;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 50px;
+  top: 50px;
+  opacity: 0;
+  transition-duration: 3s;
+  white-space: nowrap;
 }
 .weatherbg .weatherbox .right .bottombox {
   width: auto;
   height: auto;
+  position: relative;
+}
+.weatherbg .weatherbox .right .bottombox h6 {
+  color: #fff;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 50px;
+  top: 5px;
+  opacity: 0;
+  transition-duration: 3s;
+  white-space: nowrap;
 }
 .weatherbg .weatherbox .right:hover {
   width: 600px;
   border-left: 8px solid rgba(240, 240, 228, 0);
   transition-duration: 2s;
+}
+.weatherbg .weatherbox .right:hover .topbox h6 {
+  opacity: 1;
+}
+.weatherbg .weatherbox .right:hover .bottombox h6 {
+  opacity: 1;
 }
 .weatherbg .weatherbox .right:hover .dayweather {
   opacity: 1;
@@ -279,8 +316,21 @@ nav ul li a {
   transition-duration: 4s;
   opacity: 1;
 }
+.weatherbg .weatherbox .right:hover ~ .arrow {
+  transform: rotate(180deg);
+  opacity: 0.5;
+  transition-duration: 3s;
+}
 .weatherbg .weatherbox .right:not(:hover) {
   transition-duration: 4s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox h6 {
+  opacity: 0;
+  transition-duration: 5s;
+}
+.weatherbg .weatherbox .right:not(:hover) .bottombox h6 {
+  opacity: 0;
+  transition-duration: 5s;
 }
 .weatherbg .weatherbox .right:not(:hover) .dayweather {
   opacity: 0;
@@ -357,6 +407,11 @@ nav ul li a {
 .weatherbg .weatherbox .right:not(:hover) svg polyline {
   transition-duration: 4s;
   opacity: 0;
+}
+.weatherbg .weatherbox .right:not(:hover) ~ .arrow {
+  transform: rotate(0deg);
+  opacity: 1;
+  transition-duration: 6s;
 }
 
 .optbg {
