@@ -10,11 +10,13 @@ import dayjs from "dayjs";
 import Weekweather from "./Weekweather";
 import Thundersun from "./Thundersun";
 import Weektemperature from "./Weektemperature";
+import Weekuvindex from "./Weekuvindex";
 
 const Weather = ({ data, city }) => {
   let weathercode = data[12].Time[0].ElementValue[0].WeatherCode;
   let Weekweathers = data[12].Time;
   let Weekweathertemperatures = data[0].Time;
+  let weekuvindex = data[13].Time;
   return (
     <div className="weatherbg">
       <div className="weatherbox">
@@ -75,16 +77,23 @@ const Weather = ({ data, city }) => {
         </div>
 
         <div className="right">
-          <div className="topbox">
-            <h6>一週平均氣溫</h6>
-            <Weektemperature
-              Weekweathertemperatures={Weekweathertemperatures}
-            />
-          </div>
-          <div className="bottombox">
-            <h6>一週天氣概況</h6>
-            <Weekweather Weekweathers={Weekweathers} />
-          </div>
+          <label htmlFor="switch">
+            <input id="switch" type="checkbox" />
+            <div className="topbox">
+              <h6>一週平均氣溫</h6>
+              <Weektemperature
+                Weekweathertemperatures={Weekweathertemperatures}
+              />
+            </div>
+            <div className="bottombox">
+              <h6>一週天氣概況</h6>
+              <Weekweather Weekweathers={Weekweathers} />
+            </div>
+            <div className="wholebox">
+              <h6>一週紫外線指數</h6>
+              <Weekuvindex weekuvindex={weekuvindex} />
+            </div>
+          </label>
         </div>
         <div className="arrow">▶︎</div>
       </div>

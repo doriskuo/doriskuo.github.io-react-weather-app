@@ -1,0 +1,113 @@
+.weekuvindexbox
+    box-sizing: border-box
+    width: 580px
+    height: 100%
+    display: flex
+    flex-direction: column
+    position: relative
+    justify-content: flex-end
+    align-items: center
+    gap: 70px
+    .indextop
+        width: 100%
+        height: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        .dayuvindex
+            width: calc(100% / 7 - 5px)
+            height: auto
+            display: flex
+            flex-direction: column
+            opacity: 0
+            transition: 0.5s
+            h3
+                text-align: center
+                font-size: 12px
+                color: #fff
+            
+            .low
+                svg
+                    .inner
+                        fill: #a7cc22
+                    .outer
+                        stroke: #a7cc22
+            .moderate
+                svg
+                    .inner
+                        fill:#ffa503
+                    .outer
+                        stroke: #ffa503
+            .high
+                svg
+                    .inner
+                        fill:#f29801
+                    .outer
+                        stroke:#f29801
+            .veryhigh
+                svg
+                    .inner
+                        fill: #d32d1b
+                    .outer
+                        stroke: #d32d1b
+            .extreme
+                svg
+                    .inner
+                        fill: #ac4a9b
+                    .outer
+                        stroke: #ac4a9b
+
+            p
+                text-align: center
+                font-size: 10px
+                color: #fff
+
+    .indexbottom
+        width: 100%
+        height: auto
+        padding-bottom: 30px
+        .indexdescription
+            height: auto
+            display: flex
+            justify-content: center
+            align-items: center
+            table
+                color: #fff
+                width: 400px
+                border-spacing: 30px 0px
+                tr
+                    td
+                        text-align: center
+                        font-size: 12px
+                        opacity: 0
+                        transition-duration: 2s
+                        .low
+                            svg
+                                .inner
+                                    fill: #a7cc22
+                                .outer
+                                    stroke: #a7cc22
+                        .moderate
+                            svg
+                                .inner
+                                    fill:#ffa503
+                                .outer
+                                    stroke: #ffa503
+                        .high
+                            svg
+                                .inner
+                                    fill:#f29801
+                                .outer
+                                    stroke:#f29801
+                        .veryhigh
+                            svg
+                                .inner
+                                    fill: #d32d1b
+                                .outer
+                                    stroke: #d32d1b
+                        .extreme
+                            svg
+                                .inner
+                                    fill: #ac4a9b
+                                .outer
+                                    stroke: #ac4a9b

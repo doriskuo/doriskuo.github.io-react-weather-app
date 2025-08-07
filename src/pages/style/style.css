@@ -188,21 +188,36 @@ nav ul li a {
   margin: 0;
 }
 .weatherbg .weatherbox .right {
-  cursor: pointer;
   box-sizing: border-box;
   border-left: 8px solid rgb(240, 240, 228);
   width: 10px;
   overflow: hidden;
   transition-duration: 2s;
+}
+.weatherbg .weatherbox .right label {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
-.weatherbg .weatherbox .right .topbox {
+.weatherbg .weatherbox .right label input {
+  display: none;
+}
+.weatherbg .weatherbox .right label input:checked ~ .topbox, .weatherbg .weatherbox .right label input:checked ~ .bottombox {
+  display: none;
+}
+.weatherbg .weatherbox .right label input:checked ~ .wholebox {
+  display: block;
+}
+.weatherbg .weatherbox .right label .wholebox {
+  display: none;
+  box-sizing: border-box;
   width: 100%;
-  height: auto;
+  height: 440px;
   position: relative;
 }
-.weatherbg .weatherbox .right .topbox h6 {
+.weatherbg .weatherbox .right label .wholebox h6 {
   color: #fff;
   position: absolute;
   margin: 0;
@@ -213,12 +228,29 @@ nav ul li a {
   transition-duration: 3s;
   white-space: nowrap;
 }
-.weatherbg .weatherbox .right .bottombox {
+.weatherbg .weatherbox .right label .topbox {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.weatherbg .weatherbox .right label .topbox h6 {
+  color: #fff;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 50px;
+  top: 50px;
+  opacity: 0;
+  transition-duration: 3s;
+  white-space: nowrap;
+}
+.weatherbg .weatherbox .right label .bottombox {
   width: auto;
   height: auto;
   position: relative;
 }
-.weatherbg .weatherbox .right .bottombox h6 {
+.weatherbg .weatherbox .right label .bottombox h6 {
   color: #fff;
   position: absolute;
   margin: 0;
@@ -237,84 +269,129 @@ nav ul li a {
 .weatherbg .weatherbox .right:hover .topbox h6 {
   opacity: 1;
 }
+.weatherbg .weatherbox .right:hover .topbox svg circle {
+  opacity: 1;
+}
+.weatherbg .weatherbox .right:hover .topbox svg circle:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg circle:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg circle:nth-child(5) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg circle:nth-child(7) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg circle:nth-child(9) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg circle:nth-child(11) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg circle:nth-child(13) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text {
+  opacity: 1;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text:nth-child(8) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text:nth-child(10) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text:nth-child(12) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg text:nth-child(14) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:hover .topbox svg polyline {
+  transition-duration: 4s;
+  opacity: 1;
+}
 .weatherbg .weatherbox .right:hover .bottombox h6 {
   opacity: 1;
 }
-.weatherbg .weatherbox .right:hover .dayweather {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather {
   opacity: 1;
 }
-.weatherbg .weatherbox .right:hover .dayweather:nth-child(1) {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather:nth-child(1) {
   transition-delay: 0.2s;
 }
-.weatherbg .weatherbox .right:hover .dayweather:nth-child(2) {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather:nth-child(2) {
   transition-delay: 0.4s;
 }
-.weatherbg .weatherbox .right:hover .dayweather:nth-child(3) {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather:nth-child(3) {
   transition-delay: 0.6s;
 }
-.weatherbg .weatherbox .right:hover .dayweather:nth-child(4) {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather:nth-child(4) {
   transition-delay: 0.8s;
 }
-.weatherbg .weatherbox .right:hover .dayweather:nth-child(5) {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather:nth-child(5) {
   transition-delay: 1s;
 }
-.weatherbg .weatherbox .right:hover .dayweather:nth-child(6) {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather:nth-child(6) {
   transition-delay: 1.2s;
 }
-.weatherbg .weatherbox .right:hover .dayweather:nth-child(7) {
+.weatherbg .weatherbox .right:hover .bottombox .dayweather:nth-child(7) {
   transition-delay: 1.4s;
 }
-.weatherbg .weatherbox .right:hover svg circle {
+.weatherbg .weatherbox .right:hover .wholebox h6 {
   opacity: 1;
 }
-.weatherbg .weatherbox .right:hover svg circle:nth-child(1) {
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex {
+  opacity: 1;
+}
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex:nth-child(1) {
   transition-delay: 0.2s;
 }
-.weatherbg .weatherbox .right:hover svg circle:nth-child(3) {
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex:nth-child(2) {
   transition-delay: 0.4s;
 }
-.weatherbg .weatherbox .right:hover svg circle:nth-child(5) {
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex:nth-child(3) {
   transition-delay: 0.6s;
 }
-.weatherbg .weatherbox .right:hover svg circle:nth-child(7) {
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex:nth-child(4) {
   transition-delay: 0.8s;
 }
-.weatherbg .weatherbox .right:hover svg circle:nth-child(9) {
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex:nth-child(5) {
   transition-delay: 1s;
 }
-.weatherbg .weatherbox .right:hover svg circle:nth-child(11) {
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex:nth-child(6) {
   transition-delay: 1.2s;
 }
-.weatherbg .weatherbox .right:hover svg circle:nth-child(13) {
+.weatherbg .weatherbox .right:hover .wholebox .dayuvindex:nth-child(7) {
   transition-delay: 1.4s;
 }
-.weatherbg .weatherbox .right:hover svg text {
+.weatherbg .weatherbox .right:hover .wholebox td {
   opacity: 1;
 }
-.weatherbg .weatherbox .right:hover svg text:nth-child(2) {
+.weatherbg .weatherbox .right:hover .wholebox td:nth-child(1) {
   transition-delay: 0.2s;
 }
-.weatherbg .weatherbox .right:hover svg text:nth-child(4) {
+.weatherbg .weatherbox .right:hover .wholebox td:nth-child(2) {
   transition-delay: 0.4s;
 }
-.weatherbg .weatherbox .right:hover svg text:nth-child(6) {
+.weatherbg .weatherbox .right:hover .wholebox td:nth-child(3) {
   transition-delay: 0.6s;
 }
-.weatherbg .weatherbox .right:hover svg text:nth-child(8) {
+.weatherbg .weatherbox .right:hover .wholebox td:nth-child(4) {
   transition-delay: 0.8s;
 }
-.weatherbg .weatherbox .right:hover svg text:nth-child(10) {
+.weatherbg .weatherbox .right:hover .wholebox td:nth-child(5) {
   transition-delay: 1s;
-}
-.weatherbg .weatherbox .right:hover svg text:nth-child(12) {
-  transition-delay: 1.2s;
-}
-.weatherbg .weatherbox .right:hover svg text:nth-child(14) {
-  transition-delay: 1.4s;
-}
-.weatherbg .weatherbox .right:hover svg polyline {
-  transition-duration: 4s;
-  opacity: 1;
 }
 .weatherbg .weatherbox .right:hover ~ .arrow {
   transform: rotate(180deg);
@@ -328,85 +405,131 @@ nav ul li a {
   opacity: 0;
   transition-duration: 5s;
 }
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle {
+  opacity: 0;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle:nth-child(13) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle:nth-child(11) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle:nth-child(9) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle:nth-child(7) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle:nth-child(5) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle:nth-child(3) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg circle:nth-child(1) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text {
+  opacity: 0;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text:nth-child(14) {
+  transition-delay: 0.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text:nth-child(12) {
+  transition-delay: 0.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text:nth-child(10) {
+  transition-delay: 0.6s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text:nth-child(8) {
+  transition-delay: 0.8s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text:nth-child(6) {
+  transition-delay: 1s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text:nth-child(4) {
+  transition-delay: 1.2s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg text:nth-child(2) {
+  transition-delay: 1.4s;
+}
+.weatherbg .weatherbox .right:not(:hover) .topbox svg polyline {
+  transition-duration: 4s;
+  opacity: 0;
+}
 .weatherbg .weatherbox .right:not(:hover) .bottombox h6 {
   opacity: 0;
   transition-duration: 5s;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather {
   opacity: 0;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(7) {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather:nth-child(7) {
   transition-delay: 0.2s;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(6) {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather:nth-child(6) {
   transition-delay: 0.4s;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(5) {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather:nth-child(5) {
   transition-delay: 0.6s;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(4) {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather:nth-child(4) {
   transition-delay: 0.8s;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(3) {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather:nth-child(3) {
   transition-delay: 1s;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(2) {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather:nth-child(2) {
   transition-delay: 1.2s;
 }
-.weatherbg .weatherbox .right:not(:hover) .dayweather:nth-child(1) {
+.weatherbg .weatherbox .right:not(:hover) .bottombox .dayweather:nth-child(1) {
   transition-delay: 1.4s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle {
+.weatherbg .weatherbox .right:not(:hover) .wholebox h6 {
+  opacity: 0;
+  transition-duration: 5s;
+}
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex {
   opacity: 0;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(13) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex:nth-child(7) {
   transition-delay: 0.2s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(11) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex:nth-child(6) {
   transition-delay: 0.4s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(9) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex:nth-child(5) {
   transition-delay: 0.6s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(7) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex:nth-child(4) {
   transition-delay: 0.8s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(5) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex:nth-child(3) {
   transition-delay: 1s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(3) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex:nth-child(2) {
   transition-delay: 1.2s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg circle:nth-child(1) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox .dayuvindex:nth-child(1) {
   transition-delay: 1.4s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg text {
+.weatherbg .weatherbox .right:not(:hover) .wholebox td {
   opacity: 0;
 }
-.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(14) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox td:nth-child(5) {
   transition-delay: 0.2s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(12) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox td:nth-child(4) {
   transition-delay: 0.4s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(10) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox td:nth-child(3) {
   transition-delay: 0.6s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(8) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox td:nth-child(2) {
   transition-delay: 0.8s;
 }
-.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(6) {
+.weatherbg .weatherbox .right:not(:hover) .wholebox td:nth-child(1) {
   transition-delay: 1s;
-}
-.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(4) {
-  transition-delay: 1.2s;
-}
-.weatherbg .weatherbox .right:not(:hover) svg text:nth-child(2) {
-  transition-delay: 1.4s;
-}
-.weatherbg .weatherbox .right:not(:hover) svg polyline {
-  transition-duration: 4s;
-  opacity: 0;
 }
 .weatherbg .weatherbox .right:not(:hover) ~ .arrow {
   transform: rotate(0deg);
@@ -822,4 +945,135 @@ nav ul li a {
   stroke: white;
   opacity: 0;
   fill: none;
+}
+
+.uvindexbox .outer {
+  fill: rgba(255, 255, 255, 0);
+  stroke: white;
+  stroke-width: 5px;
+  stroke-dasharray: 0.1 22;
+  stroke-linecap: round;
+  z-index: -3;
+}
+.uvindexbox .inner {
+  fill: rgb(255, 255, 255);
+}
+
+.weekuvindexbox {
+  box-sizing: border-box;
+  width: 580px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 70px;
+}
+.weekuvindexbox .indextop {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weekuvindexbox .indextop .dayuvindex {
+  width: calc(14.2857142857% - 5px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.5s;
+}
+.weekuvindexbox .indextop .dayuvindex h3 {
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+.weekuvindexbox .indextop .dayuvindex .low svg .inner {
+  fill: #a7cc22;
+}
+.weekuvindexbox .indextop .dayuvindex .low svg .outer {
+  stroke: #a7cc22;
+}
+.weekuvindexbox .indextop .dayuvindex .moderate svg .inner {
+  fill: #ffa503;
+}
+.weekuvindexbox .indextop .dayuvindex .moderate svg .outer {
+  stroke: #ffa503;
+}
+.weekuvindexbox .indextop .dayuvindex .high svg .inner {
+  fill: #f29801;
+}
+.weekuvindexbox .indextop .dayuvindex .high svg .outer {
+  stroke: #f29801;
+}
+.weekuvindexbox .indextop .dayuvindex .veryhigh svg .inner {
+  fill: #d32d1b;
+}
+.weekuvindexbox .indextop .dayuvindex .veryhigh svg .outer {
+  stroke: #d32d1b;
+}
+.weekuvindexbox .indextop .dayuvindex .extreme svg .inner {
+  fill: #ac4a9b;
+}
+.weekuvindexbox .indextop .dayuvindex .extreme svg .outer {
+  stroke: #ac4a9b;
+}
+.weekuvindexbox .indextop .dayuvindex p {
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+}
+.weekuvindexbox .indexbottom {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+.weekuvindexbox .indexbottom .indexdescription {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weekuvindexbox .indexbottom .indexdescription table {
+  color: #fff;
+  width: 400px;
+  border-spacing: 30px 0px;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0;
+  transition-duration: 2s;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .low svg .inner {
+  fill: #a7cc22;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .low svg .outer {
+  stroke: #a7cc22;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .moderate svg .inner {
+  fill: #ffa503;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .moderate svg .outer {
+  stroke: #ffa503;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .high svg .inner {
+  fill: #f29801;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .high svg .outer {
+  stroke: #f29801;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .veryhigh svg .inner {
+  fill: #d32d1b;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .veryhigh svg .outer {
+  stroke: #d32d1b;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .extreme svg .inner {
+  fill: #ac4a9b;
+}
+.weekuvindexbox .indexbottom .indexdescription table tr td .extreme svg .outer {
+  stroke: #ac4a9b;
 }/*# sourceMappingURL=style.css.map */
