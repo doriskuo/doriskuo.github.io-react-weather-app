@@ -7,11 +7,10 @@ html, body {
 .weatherArea {
   width: auto;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .about {
-  padding: 50px 0px;
+  padding: 50px 10px;
   width: 100%;
   height: 70vh;
   background-color: #0F044C;
@@ -46,6 +45,16 @@ html, body {
   margin: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .about h1 {
+    font-size: 22px;
+    padding: 0px 10px;
+  }
+  .about h3 {
+    font-size: 12px;
+    padding: 0px 20px;
+  }
+}
 .footerbar {
   position: relative;
   bottom: 0px;
@@ -83,6 +92,15 @@ nav ul li a {
   font-size: 20px;
 }
 
+@media screen and (max-width: 450px) {
+  nav {
+    padding: 0px 20px;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
 .weatherbg {
   background-color: black;
   width: 100%;
@@ -657,17 +675,19 @@ nav ul li a {
 @media screen and (max-width: 800px) {
   .weatherbg {
     height: 100%;
-    padding: 50px 0px 100px 0px;
+    padding: 50px 20px 100px 20px;
   }
   .weatherbg .weatherbox {
     flex-direction: column;
+    width: 380px;
     height: auto;
+    margin: 0px 20px;
   }
   .weatherbg .weatherbox .arrow {
     display: none;
   }
   .weatherbg .weatherbox .left {
-    width: 400px;
+    width: 380px;
     height: 400px;
   }
   .weatherbg .weatherbox .left .top-in-left .left-in-lefttop {
@@ -738,7 +758,7 @@ nav ul li a {
     font-size: 12px;
   }
   .weatherbg .weatherbox .right {
-    width: 400px;
+    width: 380px;
     border-left: none;
     border-top: 8px solid rgb(240, 240, 228);
     height: 10px;
@@ -785,6 +805,14 @@ nav ul li a {
   color: white;
 }
 
+@media screen and (max-width: 500px) {
+  .optbg label {
+    font-size: 16px;
+  }
+  .optbg select {
+    font-size: 15px;
+  }
+}
 .cloudbox {
   position: relative;
   right: 50%;
@@ -1136,6 +1164,11 @@ nav ul li a {
     height: 200px;
   }
 }
+@media screen and (max-width: 800px) {
+  .weekbox {
+    width: 370px;
+  }
+}
 .thundersunbox {
   position: relative;
   width: 100px;
@@ -1184,7 +1217,7 @@ nav ul li a {
 
 @media screen and (max-width: 1180px) {
   .temperaturebox svg {
-    width: 400px;
+    width: 370px;
     height: 200px;
   }
 }
@@ -1327,6 +1360,12 @@ nav ul li a {
   }
   .weekuvindexbox .indextop .dayuvindex p {
     display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .weekuvindexbox {
+    width: 370px;
+    gap: 30px;
   }
 }
 .moonbox {
