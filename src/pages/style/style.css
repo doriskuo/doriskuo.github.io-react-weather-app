@@ -675,19 +675,18 @@ nav ul li a {
 @media screen and (max-width: 800px) {
   .weatherbg {
     height: 100%;
-    padding: 50px 20px 100px 20px;
+    padding: 50px 0px 100px 0px;
   }
   .weatherbg .weatherbox {
     flex-direction: column;
-    width: 380px;
+    width: 360px;
     height: auto;
-    margin: 0px 20px;
   }
   .weatherbg .weatherbox .arrow {
     display: none;
   }
   .weatherbg .weatherbox .left {
-    width: 380px;
+    width: 360px;
     height: 400px;
   }
   .weatherbg .weatherbox .left .top-in-left .left-in-lefttop {
@@ -758,7 +757,7 @@ nav ul li a {
     font-size: 12px;
   }
   .weatherbg .weatherbox .right {
-    width: 380px;
+    width: 360px;
     border-left: none;
     border-top: 8px solid rgb(240, 240, 228);
     height: 10px;
@@ -1166,7 +1165,7 @@ nav ul li a {
 }
 @media screen and (max-width: 800px) {
   .weekbox {
-    width: 370px;
+    width: 350px;
   }
 }
 .thundersunbox {
@@ -1217,7 +1216,7 @@ nav ul li a {
 
 @media screen and (max-width: 1180px) {
   .temperaturebox svg {
-    width: 370px;
+    width: 350px;
     height: 200px;
   }
 }
@@ -1364,7 +1363,7 @@ nav ul li a {
 }
 @media screen and (max-width: 800px) {
   .weekuvindexbox {
-    width: 370px;
+    width: 350px;
     gap: 30px;
   }
 }
