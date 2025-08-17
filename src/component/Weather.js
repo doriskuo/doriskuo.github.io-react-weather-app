@@ -45,9 +45,17 @@ const Weather = ({ data, city }) => {
 
             <div className="right-in-lefttop">
               <div className="iconbox">
+                {/* debug用 */}
                 {/* <Mooncloud className="mooncloud-in-weather" /> */}
                 {/* <Moonrain className="moonrain-in-weather" /> */}
+                {/* <Sun className="sun-in-weather" /> */}
+                {/* <Thunderrain className="thunderrain-in-weather" /> */}
+                {/* <Thundersun className="thundersun-in-weather" /> */}
+                {/* <Moonrain className="moonrain-in-weather" /> */}
+                {/* <Mooncloud className="mooncloud-in-weather" /> */}
+                {/* <Thundermoon className="thundermoon-in-weather" /> */}
 
+                {/* 實際使用 */}
                 {weathercode == "01" &&
                   (isDay ? (
                     <Sun className="sun-in-weather" />
@@ -111,20 +119,21 @@ const Weather = ({ data, city }) => {
             <div className="topbox">
               <h6>一週平均氣溫(白天)</h6>
               <Weektemperature
+                className="wt"
                 Weekweathertemperatures={Weekweathertemperatures}
               />
             </div>
             <div className="bottombox">
               <h6>一週天氣概況(白天)</h6>
-              <Weekweather Weekweathers={Weekweathers} />
+              <Weekweather className="ww" Weekweathers={Weekweathers} />
             </div>
             <div className="wholebox">
               <h6>一週紫外線指數(白天)</h6>
-              <Weekuvindex weekuvindex={weekuvindex} />
+              <Weekuvindex className="wu" weekuvindex={weekuvindex} />
             </div>
           </label>
         </div>
-        <div className="arrow">▶︎</div>
+        <div className="arrow"></div>
       </div>
     </div>
   );

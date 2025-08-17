@@ -21,17 +21,16 @@ const Weektemperature = ({ Weekweathertemperatures }) => {
         {daytemperatures.map((t, i) => {
           let tcode = t.ElementValue[0].Temperature;
           return (
-            <>
+            <React.Fragment key={i}>
               <circle
                 cx={i * 80 + 50}
                 cy={150 - tcode * 15 + 470}
                 r="4"
-                key={i}
               ></circle>
               <text x={i * 80 + 50} y={150 - tcode * 15 + 450}>
                 {tcode}˚C
               </text>
-            </>
+            </React.Fragment>
           );
         })}
         <polyline points={points} />

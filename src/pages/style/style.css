@@ -102,11 +102,13 @@ nav ul li a {
   height: auto;
 }
 .weatherbg .weatherbox .arrow {
-  color: #fff;
+  border-left: 10px solid #fff;
+  border-top: 8px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid rgba(0, 0, 0, 0);
+  border-bottom: 8px solid rgba(0, 0, 0, 0);
   position: absolute;
   right: 20px;
   top: 220px;
-  transform: rotate(180deg);
 }
 .weatherbg .weatherbox .left {
   width: 550px;
@@ -198,9 +200,6 @@ nav ul li a {
 .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundermoon-in-weather {
   transform: scale(1.2) translate(0px, -20px);
   opacity: 0.9;
-}
-.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundermoon-in-weather .circle {
-  background: #BEBEBE;
 }
 .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .overview {
   color: #EEEEEE;
@@ -435,9 +434,7 @@ nav ul li a {
   transition-delay: 1s;
 }
 .weatherbg .weatherbox .right:hover ~ .arrow {
-  transform: rotate(180deg);
-  opacity: 0.5;
-  transition-duration: 3s;
+  animation: arrowgo 3s forwards;
 }
 .weatherbg .weatherbox .right:not(:hover) {
   transition-duration: 4s;
@@ -573,11 +570,201 @@ nav ul li a {
   transition-delay: 1s;
 }
 .weatherbg .weatherbox .right:not(:hover) ~ .arrow {
-  transform: rotate(0deg);
-  opacity: 1;
-  transition-duration: 6s;
+  animation: arrowback 5s forwards;
 }
 
+@media screen and (max-width: 1180px) {
+  .weatherbg .weatherbox {
+    height: 400px;
+  }
+  .weatherbg .weatherbox .arrow {
+    top: 200px;
+  }
+  .weatherbg .weatherbox .left {
+    width: 400px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop {
+    padding: 60px 0 0 40px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .temperature {
+    font-size: 56px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .city {
+    font-size: 18px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .date {
+    font-size: 14px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .precipitation {
+    font-size: 14px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox {
+    transform: scale(1) translateY(30px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightcloud-in-weather {
+    transform: scale(1) translateY(30px);
+    opacity: 0.9;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightcloud-in-weather .circle {
+    background: #BEBEBE;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .rain-in-weather {
+    transform: scale(1) translateY(30px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightrain-in-weather {
+    transform: scale(1) translateY(30px);
+    opacity: 0.9;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightrain-in-weather .circle {
+    background: #BEBEBE;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .suncloud-in-weather {
+    transform: scale(1.2) translate(0px, 30px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .sun-in-weather {
+    transform: scale(1.4) translate(0px, 70px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thunderrain-in-weather {
+    transform: scale(1.3) translateY(10px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundersun-in-weather {
+    transform: scale(1.4) translate(-10px, 10px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .moon-in-weather {
+    transform: scale(1.3) translate(0px, 0px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .mooncloud-in-weather {
+    transform: scale(1) translate(0px, -50px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .moonrain-in-weather {
+    transform: scale(1) translate(0px, -50px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundermoon-in-weather {
+    transform: scale(1) translate(0px, -50px);
+    opacity: 0.9;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .overview {
+    transform: translateY(-50px);
+  }
+  .weatherbg .weatherbox .left .bottom-in-left .tip {
+    padding: 0px 40px;
+    font-size: 12px;
+  }
+  .weatherbg .weatherbox .right:hover {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .weatherbg {
+    height: 100%;
+    padding: 50px 0px 100px 0px;
+  }
+  .weatherbg .weatherbox {
+    flex-direction: column;
+    height: auto;
+  }
+  .weatherbg .weatherbox .arrow {
+    display: none;
+  }
+  .weatherbg .weatherbox .left {
+    width: 400px;
+    height: 400px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop {
+    padding: 60px 0 0 40px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .temperature {
+    font-size: 56px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .city {
+    font-size: 18px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .date {
+    font-size: 14px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .left-in-lefttop .precipitation {
+    font-size: 14px;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox {
+    transform: scale(1) translateY(30px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightcloud-in-weather {
+    transform: scale(1) translateY(30px);
+    opacity: 0.9;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightcloud-in-weather .circle {
+    background: #BEBEBE;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .rain-in-weather {
+    transform: scale(1) translateY(30px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightrain-in-weather {
+    transform: scale(1) translateY(30px);
+    opacity: 0.9;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightrain-in-weather .circle {
+    background: #BEBEBE;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .suncloud-in-weather {
+    transform: scale(1.2) translate(0px, 30px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .sun-in-weather {
+    transform: scale(1.4) translate(0px, 70px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thunderrain-in-weather {
+    transform: scale(1.3) translateY(10px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundersun-in-weather {
+    transform: scale(1.4) translate(-10px, 10px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .moon-in-weather {
+    transform: scale(1.3) translate(0px, 0px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .mooncloud-in-weather {
+    transform: scale(1) translate(0px, -50px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .moonrain-in-weather {
+    transform: scale(1) translate(0px, -50px);
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundermoon-in-weather {
+    transform: scale(1) translate(0px, -50px);
+    opacity: 0.9;
+  }
+  .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .overview {
+    transform: translateY(-50px);
+  }
+  .weatherbg .weatherbox .left .bottom-in-left .tip {
+    padding: 0px 40px;
+    font-size: 12px;
+  }
+  .weatherbg .weatherbox .right {
+    width: 400px;
+    border-left: none;
+    border-top: 8px solid rgb(240, 240, 228);
+    height: 10px;
+  }
+  .weatherbg .weatherbox .right:hover {
+    height: 400px;
+    border-top: 8px solid rgba(240, 240, 228, 0);
+    transition-duration: 2s;
+  }
+}
+@keyframes arrowgo {
+  100% {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+}
+@keyframes arrowback {
+  0% {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
 .optbg {
   background-color: black;
   padding: 20px;
@@ -943,6 +1130,12 @@ nav ul li a {
   transform: scale(0.6);
 }
 
+@media screen and (max-width: 1180px) {
+  .weekbox {
+    width: 400px;
+    height: 200px;
+  }
+}
 .thundersunbox {
   position: relative;
   width: 100px;
@@ -989,6 +1182,12 @@ nav ul li a {
   fill: none;
 }
 
+@media screen and (max-width: 1180px) {
+  .temperaturebox svg {
+    width: 400px;
+    height: 200px;
+  }
+}
 .uvindexbox .outer {
   fill: rgba(255, 255, 255, 0);
   stroke: white;
@@ -1120,6 +1319,16 @@ nav ul li a {
   stroke: #ac4a9b;
 }
 
+@media screen and (max-width: 1180px) {
+  .weekuvindexbox {
+    width: 400px;
+    gap: 40px;
+    justify-content: center;
+  }
+  .weekuvindexbox .indextop .dayuvindex p {
+    display: none;
+  }
+}
 .moonbox {
   position: relative;
   right: 50%;

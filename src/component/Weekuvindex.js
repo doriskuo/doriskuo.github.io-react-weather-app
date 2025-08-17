@@ -34,37 +34,39 @@ const Weekuvindex = ({ weekuvindex }) => {
       <div className="indexbottom">
         <div className="indexdescription">
           <table>
-            <tr>
-              <td>
-                <UVindex className="low" />
-              </td>
-              <td>
-                <UVindex className="moderate" />
-              </td>
-              <td>
-                <UVindex className="high" />
-              </td>
-              <td>
-                <UVindex className="veryhigh" />
-              </td>
-              <td>
-                <UVindex className="extreme" />
-              </td>
-            </tr>
-            <tr>
-              <td>0~2</td>
-              <td>3~5</td>
-              <td>6~7</td>
-              <td>8~10</td>
-              <td>11+</td>
-            </tr>
-            <tr>
-              <td>低量級</td>
-              <td>中量級</td>
-              <td>高量級</td>
-              <td>過量級</td>
-              <td>危險級</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <UVindex className="low" />
+                </td>
+                <td>
+                  <UVindex className="moderate" />
+                </td>
+                <td>
+                  <UVindex className="high" />
+                </td>
+                <td>
+                  <UVindex className="veryhigh" />
+                </td>
+                <td>
+                  <UVindex className="extreme" />
+                </td>
+              </tr>
+              <tr>
+                <td>0~2</td>
+                <td>3~5</td>
+                <td>6~7</td>
+                <td>8~10</td>
+                <td>11+</td>
+              </tr>
+              <tr>
+                <td>低量級</td>
+                <td>中量級</td>
+                <td>高量級</td>
+                <td>過量級</td>
+                <td>危險級</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
