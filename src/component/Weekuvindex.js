@@ -2,7 +2,6 @@ import React from "react";
 import UVindex from "./UVindex";
 
 const Weekuvindex = ({ weekuvindex }) => {
-  console.log(weekuvindex);
   const week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
   return (
@@ -13,7 +12,6 @@ const Weekuvindex = ({ weekuvindex }) => {
           const w = week[date.getDay()];
           const uvindexcode = uv.ElementValue[0]?.UVIndex;
           const level = uv.ElementValue[0]?.UVExposureLevel;
-          console.log(level);
           return (
             <div className="dayuvindex" key={i}>
               <h3>{w}</h3>

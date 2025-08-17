@@ -11,6 +11,7 @@ import Thundersun from "./Thundersun";
 const Weekweather = ({ Weekweathers }) => {
   const week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   const daytime = Weekweathers.filter((d, i) => i % 2 == 1);
+  console.log(daytime);
   return (
     <div className="weekbox">
       {daytime.map((item, i) => {

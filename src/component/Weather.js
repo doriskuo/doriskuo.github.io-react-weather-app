@@ -11,12 +11,19 @@ import Weekweather from "./Weekweather";
 import Thundersun from "./Thundersun";
 import Weektemperature from "./Weektemperature";
 import Weekuvindex from "./Weekuvindex";
+import Moon from "./Moon";
+import Mooncloud from "./Mooncloud";
+import Moonrain from "./Moonrain";
+import Thundermoon from "./Thundermoon";
 
 const Weather = ({ data, city }) => {
   let weathercode = data[12].Time[0].ElementValue[0].WeatherCode;
   let Weekweathers = data[12].Time;
   let Weekweathertemperatures = data[0].Time;
   let weekuvindex = data[13].Time;
+  let currenttime = data[12].Time[0].StartTime;
+  const hour = new Date(currenttime).getHours();
+  const isDay = hour === 6 || hour === 12;
   return (
     <div className="weatherbg">
       <div className="weatherbox">
@@ -38,13 +45,27 @@ const Weather = ({ data, city }) => {
 
             <div className="right-in-lefttop">
               <div className="iconbox">
-                {weathercode == "01" && <Sun className="sun-in-weather" />}
-                {["02", "03"].includes(weathercode) && (
-                  <Suncloud className="suncloud-in-weather" />
-                )}
-                {["04", "05", "06", "07"].includes(weathercode) && (
-                  <Cloud className="cloud-in-weather" />
-                )}
+                {/* <Mooncloud className="mooncloud-in-weather" /> */}
+                {/* <Moonrain className="moonrain-in-weather" /> */}
+
+                {weathercode == "01" &&
+                  (isDay ? (
+                    <Sun className="sun-in-weather" />
+                  ) : (
+                    <Moon className="moon-in-weather" />
+                  ))}
+                {["02", "03"].includes(weathercode) &&
+                  (isDay ? (
+                    <Suncloud className="suncloud-in-weather" />
+                  ) : (
+                    <Mooncloud className="mooncloud-in-weather" />
+                  ))}
+                {["04", "05", "06", "07"].includes(weathercode) &&
+                  (isDay ? (
+                    <Cloud className="cloud-in-weather" />
+                  ) : (
+                    <Cloud className="nightcloud-in-weather" />
+                  ))}
                 {[
                   "08",
                   "09",
@@ -55,13 +76,21 @@ const Weather = ({ data, city }) => {
                   "14",
                   "29",
                   "30",
-                ].includes(weathercode) && <Rain className="rain-in-weather" />}
+                ].includes(weathercode) &&
+                  (isDay ? (
+                    <Rain className="rain-in-weather" />
+                  ) : (
+                    <Rain className="nightrain-in-weather" />
+                  ))}
                 {["15", "16", "17", "18", "22", "33", "34"].includes(
                   weathercode
                 ) && <Thunderrain className="thunderrain-in-weather" />}
-                {["21"].includes(weathercode) && (
-                  <Thundersun className="thundersun-in-weather" />
-                )}
+                {["21"].includes(weathercode) &&
+                  (isDay ? (
+                    <Thundersun className="thundersun-in-weather" />
+                  ) : (
+                    <Thundermoon className="thundermoon-in-weather" />
+                  ))}
               </div>
               <h6 className="overview">
                 {data[12].Time[0].ElementValue[0].Weather}
@@ -80,17 +109,17 @@ const Weather = ({ data, city }) => {
           <label htmlFor="switch">
             <input id="switch" type="checkbox" />
             <div className="topbox">
-              <h6>一週平均氣溫</h6>
+              <h6>一週平均氣溫(白天)</h6>
               <Weektemperature
                 Weekweathertemperatures={Weekweathertemperatures}
               />
             </div>
             <div className="bottombox">
-              <h6>一週天氣概況</h6>
+              <h6>一週天氣概況(白天)</h6>
               <Weekweather Weekweathers={Weekweathers} />
             </div>
             <div className="wholebox">
-              <h6>一週紫外線指數</h6>
+              <h6>一週紫外線指數(白天)</h6>
               <Weekuvindex weekuvindex={weekuvindex} />
             </div>
           </label>

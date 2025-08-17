@@ -155,10 +155,24 @@ nav ul li a {
   height: 180px;
 }
 .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .cloud-in-weather {
-  transform: scale(1.4) translateY(30px);
+  transform: scale(1.2) translateY(30px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightcloud-in-weather {
+  transform: scale(1.2) translateY(30px);
+  opacity: 0.9;
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightcloud-in-weather .circle {
+  background: #BEBEBE;
 }
 .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .rain-in-weather {
-  transform: scale(1.4) translateY(30px);
+  transform: scale(1.2) translateY(30px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightrain-in-weather {
+  transform: scale(1.2) translateY(30px);
+  opacity: 0.9;
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .nightrain-in-weather .circle {
+  background: #BEBEBE;
 }
 .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .suncloud-in-weather {
   transform: scale(1.4) translate(-10px, 40px);
@@ -171,6 +185,22 @@ nav ul li a {
 }
 .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundersun-in-weather {
   transform: scale(1.6) translate(-20px, 30px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .moon-in-weather {
+  transform: scale(1.5) translate(-10px, 10px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .mooncloud-in-weather {
+  transform: scale(1.2) translate(0px, -20px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .moonrain-in-weather {
+  transform: scale(1.2) translate(0px, -20px);
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundermoon-in-weather {
+  transform: scale(1.2) translate(0px, -20px);
+  opacity: 0.9;
+}
+.weatherbg .weatherbox .left .top-in-left .right-in-lefttop .iconbox .thundermoon-in-weather .circle {
+  background: #BEBEBE;
 }
 .weatherbg .weatherbox .left .top-in-left .right-in-lefttop .overview {
   color: #EEEEEE;
@@ -934,6 +964,7 @@ nav ul li a {
 }
 
 .temperaturebox {
+  cursor: pointer;
   box-sizing: border-box;
   width: 100%;
   height: auto;
@@ -941,7 +972,6 @@ nav ul li a {
 .temperaturebox svg {
   width: 600px;
   height: 240px;
-  display: block;
 }
 .temperaturebox svg circle {
   fill: white;
@@ -1088,4 +1118,92 @@ nav ul li a {
 }
 .weekuvindexbox .indexbottom .indexdescription table tr td .extreme svg .outer {
   stroke: #ac4a9b;
+}
+
+.moonbox {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.moonbox .circle {
+  position: relative;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset -13px -13px #fff, inset -20px -20px 20px -10px gray, 10px 10px 20px -10px gray, -3px 10px 20px -8px gray, 10px -5px 20px -10px gray;
+  border-radius: 50%;
+  background: #0F044C;
+  transform: rotate(90deg);
+}
+
+.mooncloudbox {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+}
+.mooncloudbox .moon-in-mooncloud {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+}
+.mooncloudbox .cloud-in-mooncloud {
+  position: absolute;
+  top: 70px;
+  opacity: 0.9;
+}
+.mooncloudbox .cloud-in-mooncloud .circle {
+  background: #BEBEBE;
+}
+
+.moonrainbox {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+}
+.moonrainbox .moon-in-moonrain {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+}
+.moonrainbox .rain-in-moonrain {
+  position: absolute;
+  top: 70px;
+  opacity: 0.9;
+}
+.moonrainbox .rain-in-moonrain .circle {
+  background: #BEBEBE;
+}
+
+.thundermoonbox {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+}
+.thundermoonbox .moon-in-thundermoon {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+}
+.thundermoonbox .thunder-in-thundermoon {
+  transform: scale(1.3);
+  position: absolute;
+  top: 70px;
+  opacity: 0.9;
+}
+.thundermoonbox .thunder-in-thundermoon .circle {
+  background: #BEBEBE;
 }/*# sourceMappingURL=style.css.map */

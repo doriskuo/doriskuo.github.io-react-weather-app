@@ -8,7 +8,6 @@ const Weektemperature = ({ Weekweathertemperatures }) => {
       new Date(a.ElementValue[0].StartTime) -
       new Date(b.ElementValue[0].StartTime)
   );
-  console.log(daytemperatures);
   const temps = daytemperatures.map((tem) => {
     return tem.ElementValue[0].Temperature;
   });
