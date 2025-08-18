@@ -1421,14 +1421,14 @@ nav ul li a {
     font-size: 10px;
     color: #fff;
   }
-  .weekbox .dayweather h3 .sun-in-weekweather, .weekbox .dayweather h3 .suncloud-in-weekweather, .weekbox .dayweather h3 .thunderrain-in-weekweather {
-    transform: scale(0.2);
+  .weekbox .dayweather .sun-in-weekweather, .weekbox .dayweather .suncloud-in-weekweather, .weekbox .dayweather .thunderrain-in-weekweather {
+    transform: scale(0.3);
   }
-  .weekbox .dayweather h3 .cloud-in-weekweather, .weekbox .dayweather h3 .rain-in-weekweather {
-    transform: scale(0.2);
+  .weekbox .dayweather .cloud-in-weekweather, .weekbox .dayweather .rain-in-weekweather {
+    transform: scale(0.3);
   }
-  .weekbox .dayweather h3 .thundersun-in-weekweather {
-    transform: scale(0.2);
+  .weekbox .dayweather .thundersun-in-weekweather {
+    transform: scale(0.3);
   }
 }
 .thundersunbox {
@@ -1638,6 +1638,21 @@ nav ul li a {
 @media screen and (max-width: 450px) {
   .weekuvindexbox {
     width: 290px;
+  }
+  .weekuvindexbox .indexbottom {
+    padding-bottom: 20px;
+  }
+  .weekuvindexbox .indexbottom .indexdescription table {
+    border-spacing: 10px 0px;
+  }
+  .weekuvindexbox .indexbottom .indexdescription table tbody tr td {
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 10px;
+    min-width: 32px;
+  }
+  .weekuvindexbox .indexbottom .indexdescription table tbody tr:nth-child(3) {
+    height: 50px;
   }
 }
 .moonbox {
