@@ -11,7 +11,7 @@
             opacity: 0
             transition: 0.5s
         text
-            font-size: 12px
+            font-size: 16px
             opacity: 0
             fill: white
         polyline
@@ -22,12 +22,22 @@
 @media screen and (max-width:1180px)
     .temperaturebox
         svg
+            width: 400px
+            height: 200px
+            
+@media screen and (max-width:800px)
+    .temperaturebox
+        svg
             width: 350px
             height: 200px
+            text
+                font-size: 14px
 
 @media screen and (max-width:450px)
     .temperaturebox
         svg
             width: 290px
+            text
+                font-size: 12px
 
         

@@ -999,17 +999,23 @@ nav ul li a {
     border-left: none;
     height: 400px;
   }
-  .weatherbg .weatherbox .right .topbox h6 {
+  .weatherbg .weatherbox .right label .topbox h6 {
+    opacity: 1;
+    left: 15px;
+    font-size: 10px;
+  }
+  .weatherbg .weatherbox .right label .bottombox h6 {
+    opacity: 1;
+    left: 15px;
+    font-size: 10px;
+  }
+  .weatherbg .weatherbox .right label .wholebox {
     opacity: 1;
   }
-  .weatherbg .weatherbox .right .bottombox h6 {
+  .weatherbg .weatherbox .right label .wholebox h6 {
+    left: 15px;
     opacity: 1;
-  }
-  .weatherbg .weatherbox .right .wholebox {
-    opacity: 1;
-  }
-  .weatherbg .weatherbox .right .wholebox h6 {
-    opacity: 1;
+    font-size: 10px;
   }
 }
 @keyframes arrowgo {
@@ -1418,7 +1424,7 @@ nav ul li a {
   }
   .weekbox .dayweather h3 {
     text-align: center;
-    font-size: 10px;
+    font-size: 8px;
     color: #fff;
   }
   .weekbox .dayweather .sun-in-weekweather, .weekbox .dayweather .suncloud-in-weekweather, .weekbox .dayweather .thunderrain-in-weekweather {
@@ -1467,7 +1473,7 @@ nav ul li a {
   transition: 0.5s;
 }
 .temperaturebox svg text {
-  font-size: 12px;
+  font-size: 16px;
   opacity: 0;
   fill: white;
 }
@@ -1479,13 +1485,25 @@ nav ul li a {
 
 @media screen and (max-width: 1180px) {
   .temperaturebox svg {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .temperaturebox svg {
     width: 350px;
     height: 200px;
+  }
+  .temperaturebox svg text {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 450px) {
   .temperaturebox svg {
     width: 290px;
+  }
+  .temperaturebox svg text {
+    font-size: 12px;
   }
 }
 .uvindexbox .outer {
@@ -1646,7 +1664,6 @@ nav ul li a {
     border-spacing: 10px 0px;
   }
   .weekuvindexbox .indexbottom .indexdescription table tbody tr td {
-    border: 1px solid #fff;
     text-align: center;
     font-size: 10px;
     min-width: 32px;
