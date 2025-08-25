@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+一個使用 React 開發，並透過 中央氣象局開放資料 API (CWB Open Data API) 取得天氣資訊的應用程式。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 功能特色
 
-## Available Scripts
+查詢特定城市/地區的天氣資訊
 
-In the project directory, you can run:
+顯示當前氣溫、天氣狀況、降雨機率等資料
 
-### `npm start`
+介面簡單，資料即時更新
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🛠️ 使用技術
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React 18
 
-### `npm test`
+JavaScript (ES6+)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Fetch API 串接中央氣象局 API
 
-### `npm run build`
+Tailwind CSS（如果你有用到的話）
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📦 安裝與使用
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone 專案
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+git clone https://github.com/你的帳號/weather-app.git
+cd weather-app
 
-### `npm run eject`
+安裝套件
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+建立 .env 檔案，加入你的氣象局 API 金鑰：
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+REACT_APP_CWB_API_KEY=你的 API 金鑰
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+啟動開發伺服器
 
-## Learn More
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+在瀏覽器開啟 http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔑 取得 API 金鑰
 
-### Code Splitting
+前往 中央氣象局開放資料平台
+申請會員並取得 API Key。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📂 專案結構
+weather-app/
+├── public/
+│ └── index.html
+├── src/
+│ ├── components/ # React 元件
+│ ├── pages # Roter 分頁
+│ ├── App.js
+│ ├── Layout.js
+│ └── index.js
+├── .env
+├── package.json
+└── README.md
 
-### Analyzing the Bundle Size
+📸 預覽
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![專案截圖](./public/project.jpg)
 
-### Making a Progressive Web App
+📄 授權
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+本專案僅作為學習用途，無商業使用授權。
