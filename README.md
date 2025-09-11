@@ -16,7 +16,7 @@ JavaScript (ES6+)
 
 Fetch API 串接中央氣象局 API
 
-Tailwind CSS（如果你有用到的話）
+Tailwind CSS
 
 📦 安裝與使用
 
