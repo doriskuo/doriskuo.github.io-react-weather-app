@@ -22,7 +22,7 @@ Tailwind CSS（如果你有用到的話）
 
 Clone 專案
 
-git clone https://github.com/你的帳號/weather-app.git
+git clone [https://github.com/你的帳號/weather-app.git]
 cd weather-app
 
 安裝套件
