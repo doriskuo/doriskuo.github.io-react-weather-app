@@ -101,8 +101,7 @@ weather-app/
 
 📸 成果展示
 
-- [圖片](doriskuo.github.io-react-weather-app/public
-/project.jpg)
+![網頁圖片](/public/project.jpg)
 
 
 🚀 後續優化方向
