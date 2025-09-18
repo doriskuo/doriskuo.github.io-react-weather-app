@@ -101,7 +101,7 @@ weather-app/
 
 📸 成果展示
 
-![網頁圖片](./public/project.jpg)
+![網頁圖片](public/project.jpg)
 
 
 🚀 後續優化方向
