@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x",
+      "environment": {
+        "AUTH_KEY": "@auth_key"
+      }
+    }
+  }
+}
