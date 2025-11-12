@@ -115,6 +115,29 @@ AUTH_KEY=你的氣象署金鑰
 
 ---
 
+## 🔒 2025 新版 Vercel Serverless 設定
+
+由於新版 Vercel 已停用 `runtime` 屬性，  
+若要在 Serverless Function 中使用 **axios**，需在 `vercel.json` 中明確指定打包設定：
+
+\```json
+{
+"$schema": "https://openapi.vercel.sh/vercel.json",
+"functions": {
+"api/\*.js": {
+"includeFiles": "node_modules/axios/\*\*",
+"memory": 1024,
+"maxDuration": 10
+}
+}
+}
+\```
+
+> ✅ `includeFiles` 是新版 schema 唯一合法方式，  
+> 可確保 `axios` 模組被正確打包進 Serverless Function。
+
+---
+
 ## 📂 專案結構
 
 \```bash
@@ -132,6 +155,7 @@ weather-app/
 │ │ └── Page404.jsx
 │ ├── App.js
 │ └── index.js
+├── vercel.json # Serverless 設定檔
 ├── .env # 僅本地使用，不上傳 GitHub
 ├── package.json
 └── README.md
